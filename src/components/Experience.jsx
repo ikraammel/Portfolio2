@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import React from "react";
+import CustomExperience from "./custom-experience/CustomExperience";
 
 const Experience = () => {
   return (
@@ -14,7 +15,7 @@ const Experience = () => {
       >
         Explore my
       </motion.p>
-      
+
       {/* Animation du titre "Experience" */}
       <motion.h1
         className="title"
@@ -29,68 +30,15 @@ const Experience = () => {
       <div className="experience-details-container">
         <div className="about-container">
           {/* Animation des détails de programmation */}
-          <motion.div
-            className="details-container"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <h2 className="experience-sub-title">Programming Languages</h2>
-            <div className="article-container">
-              {[
-                { title: "Python" },
-                { title: "C language" },
-                { title: "Javascript" },
-                { title: "Java" },
-              ].map((item, index) => (
-                <motion.article
-                  key={index}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
-                >
-                  <img src="checkmark.png" alt="experience icon" className="icon" />
-                  <div>
-                    <h3>{item.title}</h3>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </motion.div>
-
+          <CustomExperience
+            titre="Programming Languages"
+            skills={["Python", "C language", "Javascript", "Java"]}
+          />
           {/* Animation des détails du développement web */}
-          <motion.div
-            className="details-container"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <h2 className="experience-sub-title">Web development</h2>
-            <div className="article-container">
-              {[
-                { title: "HTML" },
-                { title: "CSS" },
-                { title: "Javascript" },
-                { title: "React" },
-              ].map((item, index) => (
-                <motion.article
-                  key={index}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.2 }}
-                >
-                  <img src="checkmark.png" alt="experience icon" className="icon" />
-                  <div>
-                    <h3>{item.title}</h3>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </motion.div>
+          <CustomExperience
+            titre="Web development"
+            skills={["HTML", "CSS", "Javascript", "React"]}
+          />
         </div>
 
         {/* Animation de la flèche */}
@@ -103,7 +51,7 @@ const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.7 }}
           whileHover={{ scale: 1.2 }}
-          onClick={() => (window.location.href = '#projects')}
+          onClick={() => (window.location.href = "#projects")}
         />
       </div>
     </section>
