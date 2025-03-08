@@ -1,12 +1,12 @@
 import "./App.css";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import FirstPage from "./components/FirstPage";
-import Footer from "./components/Footer";
-import HamburgerNav from "./components/HamburgerNav";
-import Profile from "./components/Profile";
-import Projects from "./components/Projects";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Experience from "./components/Experience/Experience";
+import FirstPage from "./components/FirstPage/FirstPage";
+import Footer from "./components/Footer/Footer";
+import HamburgerNav from "./components/HamburgerNav/HamburgerNav";
+import Profile from "./components/Profile/Profile";
+import Projects from "./components/Projects/Projects";
 import "./mediaqueries.css";
 import "./style.css";
 

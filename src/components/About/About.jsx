@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import React from "react";
-import AboutChild from "./about-child/AboutChild";
+import AboutChild from "./AboutChild";
+import "./style.css";
+import Motion from "../Motion";
 
 const About = () => {
   return (
     <section id="about">
-      <p className="section__text__p1">Get to know more</p>
-      <h1 className="title">About me</h1>
+      <Motion className="section__text__p1" text1="Get to know more" text2="About me"/>
       <div className="section-container">
         <motion.div
           className="section_pic-container"
@@ -33,12 +34,12 @@ const About = () => {
               alt="education icon"
               src="education.png"
               p={
-                <p>
+                <div>
                   -Computer Engineering & AI Student
                   <br />
                   -Preparatory Classes <br />
                   -Baccalaureate in Mathematical Sciences A
-                </p>
+                </div>
               }
             />
             <AboutChild
@@ -46,11 +47,11 @@ const About = () => {
               src="langues.png"
               alt="langue icon"
               p={
-                <p>
+                <div>
                   <b>Arabic: </b>Native <br />
                   <b>French: </b> DELF B2 <br />
                   <b>English: </b>Intermediate{" "}
-                </p>
+                </div>
               }
             />
           </div>
